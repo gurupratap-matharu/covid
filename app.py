@@ -458,13 +458,13 @@ def world_map_active(view, date_index):
                             color=df_world_map['share_of_last_week'],
                             cmax=100,
                             colorbar=dict(
-                                title="Percentage of<br>cases occurring in<br>the previous week",
+                                title="Porcentaje de casos<br> en la semana anterio",
                                 thickness=30)
                             )
             )
         ],
         'layout': go.Layout(
-            title='Numeros de cases en total',
+            title='Numeros de casos en total',
             geo=dict(scope=scope,
                      projection_type=projection_type,
                      showland=True,
@@ -475,7 +475,7 @@ def world_map_active(view, date_index):
                      showlakes=True),
             font=dict(color=colors['text']),
             paper_bgcolor=colors['background'],
-            plot_bgcolor=colors['background']
+            plot_bgcolor=colors['background'],
         )
     }
 
@@ -588,7 +588,7 @@ app.layout = html.Div(style={'backgroundColor': colors['background']}, children=
             step=None,
             vertical=False,
             updatemode='mouseup')],
-        style={'width': '50%', 'display': 'inline-block'}
+        style={'width': '50%', 'display': 'inline-block', 'vertical-align': 'top'}
     ),
 
     html.Div([
