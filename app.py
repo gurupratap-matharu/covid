@@ -464,7 +464,7 @@ def world_map_active(view, date_index):
             )
         ],
         'layout': go.Layout(
-            title='Number of cumulative confirmed cases (size of marker)<br>and share of new cases from the previous week (color)',
+            title='Numeros de cases en total',
             geo=dict(scope=scope,
                      projection_type=projection_type,
                      showland=True,
@@ -547,7 +547,6 @@ app.layout = html.Div(style={'backgroundColor': colors['background']}, children=
             'display': 'inline-block'
         }
     ),
-    html.Hr(),
 
     html.Div([
         html.Div(
@@ -573,7 +572,7 @@ app.layout = html.Div(style={'backgroundColor': colors['background']}, children=
         ],
             style={'width': '50%', 'float': 'right', 'vertical-align': 'bottom'}
         )],
-        style={'width': '98%', 'float': 'center', 'vertical-align': 'bottom'}
+        style={'width': '98%', 'float': 'center', 'vertical-align': 'bottom', 'margin-top': '20%'}
     ),
 
     html.Div([
@@ -589,8 +588,7 @@ app.layout = html.Div(style={'backgroundColor': colors['background']}, children=
             step=None,
             vertical=False,
             updatemode='mouseup')],
-        style={'width': '50%',
-               'display': 'inline-block'}
+        style={'width': '50%', 'display': 'inline-block'}
     ),
 
     html.Div([
@@ -615,12 +613,13 @@ app.layout = html.Div(style={'backgroundColor': colors['background']}, children=
 
     html.Div(
         dcc.Markdown('''
-            Built by [Greg Rafferty](https://www.linkedin.com/in/gregrafferty/)  
+            Modified by [Gurupratap Matharu](https://www.linkedin.com/in/gurupratap-matharu/)
+            Inspired from [Greg Rafferty](https://www.linkedin.com/in/gregrafferty/) blog
             Source data: [Johns Hopkins CSSE](https://github.com/CSSEGISandData/COVID-19)
             '''),
         style={
             'textAlign': 'center',
-            'color': '#FEFEFE',
+            'color': colors['text'],
             'width': '100%',
             'float': 'center',
             'display': 'inline-block'}
